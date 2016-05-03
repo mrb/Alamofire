@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(
         application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?)
+        didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?)
         -> Bool {
         let splitViewController = window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers.last as! UINavigationController
@@ -45,8 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func splitViewController(
         splitViewController: UISplitViewController,
-        collapseSecondaryViewController secondaryViewController: UIViewController,
-        ontoPrimaryViewController primaryViewController: UIViewController)
+        collapseSecondaryViewController secondaryViewController : UIViewController,
+        ontoPrimaryViewController primaryViewController : UIViewController)
         -> Bool {
         if let secondaryAsNavController = secondaryViewController as? UINavigationController {
             if let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController {
