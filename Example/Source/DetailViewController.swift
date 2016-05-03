@@ -40,7 +40,7 @@ class DetailViewController: UITableViewController {
         }
     }
 
-    var headers: [String: String] = [:]
+    var headers: [String : String] = [:]
     var body: String?
     var elapsedTime: NSTimeInterval?
     var segueIdentifier: String?
@@ -53,7 +53,8 @@ class DetailViewController: UITableViewController {
 
     // MARK: View Lifecycle
 
-    override func awakeFromNib() {
+    override func awakeFromNib()
+    {
         super.awakeFromNib()
         refreshControl?.addTarget(self, action: #selector(DetailViewController.refresh), forControlEvents: .ValueChanged)
     }
